@@ -36,3 +36,7 @@ func (s *Stack) Pop() (v interface{}, m bool) {
 func (s *Stack) Size() int {
 	return s.size
 }
+
+func (s *Stack) Empty() bool {
+	return s.size == 0
+}
