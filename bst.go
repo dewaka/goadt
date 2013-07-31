@@ -70,6 +70,22 @@ func (n *BSTNode) ToSlice() []Comparable {
 	return appendElemsToSlice(n, res)
 }
 
+func (n *BSTNode) Min() Comparable {
+	if n.left != nil {
+		return n.left.Min()
+	} else {
+		return n.val
+	}
+}
+
+func (n *BSTNode) Max() Comparable {
+	if n.right != nil {
+		return n.right.Max()
+	} else {
+		return n.val
+	}
+}
+
 func insert(node *BSTNode, val Comparable) {
 	switch {
 	case node == nil:
